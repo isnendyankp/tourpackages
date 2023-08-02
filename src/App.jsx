@@ -6,6 +6,10 @@ const App = () => {
   const [isLoading,setIsLoading] = useState(true)
   const [tours, setTours] = useState([]);
 
+  const fetchTours = async () =>{
+
+  }
+
   useEffect(()=>{}, [
 
   ])
@@ -16,4 +20,5 @@ export default App;
 // add progress:
 // - cr8 state Variable isLoading
 // - cr8 state Variable tours
-// - cr8 base useEffect 
+// - cr8 base useEffect
+// - cr8 base fetch function(fetchTours) for get data tour  from request API
