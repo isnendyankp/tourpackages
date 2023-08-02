@@ -13,14 +13,13 @@ const App = () => {
       const tours = await response.json();
       console.log(tours);
     } catch (error) {
-      
+      console.log(error)
     }
+  };
 
-  }
-
-  useEffect(()=>{}, [
-
-  ])
+  useEffect(()=>{
+    fetchTours();
+  }, []);
   return <h2>Tours Starter</h2>;
 };
 export default App;
@@ -31,4 +30,5 @@ export default App;
 // - cr8 base useEffect
 // - cr8 base fetch function(fetchTours) for get data tour from request API
 // - add setIsLoading in fetchTours cr8 base try to get data & catch error for manipulate error with error message
-// - add request URL with response varible then make data into object JSON & manipulate data with display console.log(tours)
+// - add request URL with response variable then make data into object JSON & manipulate data with display console.log(tours)
+// - add log error & navigate fetchTour in useEffect
