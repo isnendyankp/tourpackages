@@ -9,7 +9,9 @@ const App = () => {
   const fetchTours = async () =>{
     setIsLoading(true)
     try {
-      
+      const response = await fetch(url);
+      const tours = await response.json();
+      console.log(tours);
     } catch (error) {
       
     }
@@ -28,4 +30,5 @@ export default App;
 // - cr8 state Variable tours
 // - cr8 base useEffect
 // - cr8 base fetch function(fetchTours) for get data tour from request API
-// - add setIsLoading in fetchTours cr8 base try & catch
+// - add setIsLoading in fetchTours cr8 base try to get data & catch error for manipulate error with error message
+// - add request URL with response varible then make data into object JSON & manipulate data with display console.log(tours)
