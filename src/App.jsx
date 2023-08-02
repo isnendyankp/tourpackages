@@ -7,6 +7,12 @@ const App = () => {
   const [tours, setTours] = useState([]);
 
   const fetchTours = async () =>{
+    setIsLoading(true)
+    try {
+      
+    } catch (error) {
+      
+    }
 
   }
 
@@ -21,4 +27,5 @@ export default App;
 // - cr8 state Variable isLoading
 // - cr8 state Variable tours
 // - cr8 base useEffect
-// - cr8 base fetch function(fetchTours) for get data tour  from request API
+// - cr8 base fetch function(fetchTours) for get data tour from request API
+// - add setIsLoading in fetchTours cr8 base try & catch
