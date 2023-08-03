@@ -15,6 +15,7 @@ const App = () => {
     } catch (error) {
       console.log(error)
     }
+    setIsLoading(false)
   };
 
   useEffect(()=>{
@@ -32,3 +33,4 @@ export default App;
 // - add setIsLoading in fetchTours cr8 base try to get data & catch error for manipulate error with error message
 // - add request URL with response variable then make data into object JSON & manipulate data with display console.log(tours)
 // - add log error & navigate fetchTour in useEffect
+// - add setIsloading(false) if success or get error
