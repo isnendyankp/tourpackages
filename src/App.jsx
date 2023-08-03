@@ -21,6 +21,11 @@ const App = () => {
   useEffect(()=>{
     fetchTours();
   }, []);
+
+  if(isLoading){
+    return
+  }
+  
   return <h2>Tours Starter</h2>;
 };
 export default App;
@@ -35,3 +40,4 @@ export default App;
 // - add log error & navigate fetchTour in useEffect
 // - add setIsloading(false) if success or get error to indicates that the data collection process is complete.
 // - data tours that have been taken are entered into state tours. : setTours(tours);
+// - add return based on condition: if(isLoading){ return } 
