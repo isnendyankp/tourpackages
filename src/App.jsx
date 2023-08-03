@@ -11,7 +11,7 @@ const App = () => {
     try {
       const response = await fetch(url);
       const tours = await response.json();
-      console.log(tours);
+      setTours(tours);
     } catch (error) {
       console.log(error)
     }
@@ -33,4 +33,5 @@ export default App;
 // - add setIsLoading in fetchTours cr8 base try to get data & catch error for manipulate error with error message
 // - add request URL with response variable then make data into object JSON & manipulate data with display console.log(tours)
 // - add log error & navigate fetchTour in useEffect
-// - add setIsloading(false) if success or get error
+// - add setIsloading(false) if success or get error to indicates that the data collection process is complete.
+// - data tours that have been taken are entered into state tours. : setTours(tours);
