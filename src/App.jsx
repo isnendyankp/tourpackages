@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from './Loading';
+import Tours from './Tours';
 
 const url = 'https://course-api.com/react-tours-project';
 
@@ -29,7 +30,9 @@ const App = () => {
     </main>
   }
   
-  return <h2>Tours Starter</h2>;
+  return <main>
+    <Tours />
+  </main>
 };
 export default App;
 
@@ -45,3 +48,4 @@ export default App;
 // - data tours that have been taken are entered into state tours. : setTours(tours);
 // - add return based on condition: if(isLoading){ return } 
 // - add loading component at return conditianal statement & import Loading component
+// - import Tours & pass in return 
