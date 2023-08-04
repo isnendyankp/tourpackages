@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tours = () => {
+const Tours = ({tours}) => {
   return (
     <h2>Tours</h2>
   )
@@ -8,4 +8,5 @@ const Tours = () => {
 
 export default Tours
 
-// - cr8 base Tours component 
+// - cr8 base Tours component
+// - Add parameter tours at Tours 
