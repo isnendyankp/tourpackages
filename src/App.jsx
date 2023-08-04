@@ -31,7 +31,7 @@ const App = () => {
   }
   
   return <main>
-    <Tours />
+    <Tours tours={tours}/>
   </main>
 };
 export default App;
@@ -48,4 +48,5 @@ export default App;
 // - data tours that have been taken are entered into state tours. : setTours(tours);
 // - add return based on condition: if(isLoading){ return } 
 // - add loading component at return conditianal statement & import Loading component
-// - import Tours & pass in return 
+// - import Tours & pass in return
+// - pass in tours prop at return 
