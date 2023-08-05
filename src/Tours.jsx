@@ -23,3 +23,4 @@ export default Tours
 // - renew structure return
 // - add div with classname tours
 // - add base iterate over tours map
+// - call tour as a argument
