@@ -10,7 +10,7 @@ const Tours = ({tours}) => {
       </div>
       <div className='tours'>
         {tours.map((tour)=>{
-          return <Tour key={tour.id} />;
+          return <Tour key={tour.id} {...tour} />;
         })}
       </div>
     </section>
@@ -27,3 +27,4 @@ export default Tours
 // - call tour as a argument
 // - add return with Tour Component & import it too
 // - Add key property is set with the id value of the tour object being iterated over.
+// - Add spread operator for used to retrieve all the properties on the tour object and pass them as separate properties into the <Tour /> element/component.
