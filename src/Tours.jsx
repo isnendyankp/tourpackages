@@ -1,4 +1,5 @@
 import React from 'react'
+import Tour from './Tour'
 
 const Tours = ({tours}) => {
   return (
@@ -9,7 +10,7 @@ const Tours = ({tours}) => {
       </div>
       <div className='tours'>
         {tours.map(()=>{
-          
+          return <Tour />
         })}
       </div>
     </section>
@@ -24,3 +25,4 @@ export default Tours
 // - add div with classname tours
 // - add base iterate over tours map
 // - call tour as a argument
+// - add return with Tour Component & import it too
