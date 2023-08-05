@@ -9,8 +9,8 @@ const Tours = ({tours}) => {
         <div className="title-underline"></div>
       </div>
       <div className='tours'>
-        {tours.map(()=>{
-          return <Tour />
+        {tours.map((tour)=>{
+          return <Tour key={tour.id} />;
         })}
       </div>
     </section>
@@ -26,3 +26,4 @@ export default Tours
 // - add base iterate over tours map
 // - call tour as a argument
 // - add return with Tour Component & import it too
+// - Add key property is set with the id value of the tour object being iterated over.
