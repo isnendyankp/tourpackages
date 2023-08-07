@@ -9,7 +9,7 @@ const App = () => {
   const [tours, setTours] = useState([]);
 
   const removeTour = (id) =>{
-
+    const newTours = tours.filter((tour) => tour.id !== id);
   }
 
   const fetchTours = async () =>{
@@ -55,4 +55,5 @@ export default App;
 // - import Tours & pass in return
 // - pass in tours prop at return
 // - cr8 base function removeTour
-// - pass in paramter id for removeTour 
+// - pass in paramter id for removeTour
+// - cr8 const newTours with filter function. if the id not same with value id, the tour elements will be included in the newTours array 
