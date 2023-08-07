@@ -8,6 +8,10 @@ const App = () => {
   const [isLoading,setIsLoading] = useState(true)
   const [tours, setTours] = useState([]);
 
+  const removeTour = () =>{
+
+  }
+
   const fetchTours = async () =>{
     setIsLoading(true)
     try {
@@ -49,4 +53,5 @@ export default App;
 // - add return based on condition: if(isLoading){ return } 
 // - add loading component at return conditianal statement & import Loading component
 // - import Tours & pass in return
-// - pass in tours prop at return 
+// - pass in tours prop at return
+// - cr8 base function removeTour 
