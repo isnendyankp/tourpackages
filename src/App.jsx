@@ -35,9 +35,11 @@ const App = () => {
     </main>
   }
   
-  return <main>
-    <Tours tours={tours}/>
-  </main>
+  return (
+    <main>
+      <Tours tours={tours} removeTour={removeTour} />
+    </main>
+  );
 };
 export default App;
 
@@ -59,3 +61,4 @@ export default App;
 // - pass in paramter id for removeTour
 // - cr8 const newTours with filter function. if the id not same with value id, the tour elements will be included in the newTours array 
 // - call function setTour() with argument newTours
+// - navigate removeTour at return
