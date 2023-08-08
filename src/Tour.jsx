@@ -22,3 +22,4 @@ export default Tour
 // - Setup span as a price for each tour
 // - Add div & pass parameter name, info
 // - Add parameter removeTour in Tour Component
+// - Pass in removeTour at return Tour Component
