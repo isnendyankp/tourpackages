@@ -11,7 +11,7 @@ const Tours = ({ tours, removeTour }) => {
       <div className="tours">
         {tours.map((tour) => {
           console.log(tour);
-          return <Tour key={tour.id} {...tour} />;
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </section>
@@ -31,3 +31,4 @@ export default Tours
 // - Add spread operator for used to retrieve all the properties on the tour object and pass them as separate properties into the <Tour /> element/component.
 // - check parameter with log(tour);
 // - Add parameter removeTour in Tours Component
+// - Pass in removeTour at return
