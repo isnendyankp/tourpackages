@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tour = ({ id, image, info, name, price }) => {
+const Tour = ({ id, image, info, name, price, removeTour }) => {
   return (
     <article className="single-tour">
       <img src={image} alt={name} className="img" />
@@ -21,3 +21,4 @@ export default Tour
 // - Setup image Element structure
 // - Setup span as a price for each tour
 // - Add div & pass parameter name, info
+// - Add parameter removeTour in Tour Component
