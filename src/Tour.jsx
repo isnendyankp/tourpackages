@@ -8,6 +8,13 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
       <div className="tour-info">
         <h5>{name}</h5>
         <p>{info}</p>
+        <button
+          type='button'
+          className="delete-btn btn-block btn"
+          onClick={() => removeTour(id)}
+        >
+          not interested
+        </button>
       </div>
     </article>
   );
@@ -22,4 +29,4 @@ export default Tour
 // - Setup span as a price for each tour
 // - Add div & pass parameter name, info
 // - Add parameter removeTour in Tour Component
-// - Pass in removeTour at return Tour Component
+// - Add removeTour with Pass in at button Tour Component
