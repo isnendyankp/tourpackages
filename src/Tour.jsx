@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 const Tour = ({ id, image, info, name, price, removeTour }) => {
+  const [readMore, setReadMore] = useState(false);
   return (
     <article className="single-tour">
       <img src={image} alt={name} className="img" />
@@ -30,3 +32,4 @@ export default Tour
 // - Add div & pass parameter name, info
 // - Add parameter removeTour in Tour Component
 // - Add removeTour with Pass in at button Tour Component
+// - setup state variable with useState
