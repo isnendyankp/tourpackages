@@ -12,7 +12,7 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
         <h5>{name}</h5>
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}
-          <button type='button' className="info-btn">
+          <button type='button' className="info-btn" onClick={}>
             readmore
           </button>
         </p>
@@ -43,3 +43,4 @@ export default Tour
 // - check info substring with log for first 10 character from string 
 // - Add info substring 200 if readmmore false value
 // - Add base button for readmore
+// - Setup base onClick on button readmore
