@@ -13,7 +13,7 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}
           <button className="info-btn" onClick={() => setReadMore(!readMore)}>
-            readmore
+            {readMore ? 'show less' : '  read more'}
           </button>
         </p>
         <button
@@ -45,3 +45,4 @@ export default Tour
 // - Add base button for readmore
 // - Setup base onClick on button readmore
 // - pass in function to change the value of the variable readMore to the opposite
+// - Navigate statevalue readmore if readmore true will display showless(only display substring until 200 char) and if false just display readmore(display all info)
