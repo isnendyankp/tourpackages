@@ -10,7 +10,7 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
       <span className="tour-price">${price}</span>
       <div className="tour-info">
         <h5>{name}</h5>
-        <p>{readMore ? info :}</p>
+        {readMore ? info : `${info.substring(0, 200)}...`}
         <button
           type="button"
           className="delete-btn btn-block btn"
@@ -36,3 +36,4 @@ export default Tour
 // - setup state variable with useState
 // - setup readmore display with ternary conditional
 // - check info substring with log for first 10 character from string 
+// - Add info substring 200 if readmmore false value
