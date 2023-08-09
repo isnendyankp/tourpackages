@@ -12,7 +12,7 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
         <h5>{name}</h5>
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}
-          <button type='button' className="info-btn" onClick={}>
+          <button className="info-btn" onClick={() => setReadMore(!readMore)}>
             readmore
           </button>
         </p>
@@ -44,3 +44,4 @@ export default Tour
 // - Add info substring 200 if readmmore false value
 // - Add base button for readmore
 // - Setup base onClick on button readmore
+// - pass in function to change the value of the variable readMore to the opposite
