@@ -3,6 +3,7 @@ import React from 'react'
 
 const Tour = ({ id, image, info, name, price, removeTour }) => {
   const [readMore, setReadMore] = useState(false);
+  console.log(info.substring(0, 10));
   return (
     <article className="single-tour">
       <img src={image} alt={name} className="img" />
@@ -34,3 +35,4 @@ export default Tour
 // - Add removeTour with Pass in at button Tour Component
 // - setup state variable with useState
 // - setup readmore display with ternary conditional
+// - check info substring with log for first 10 character from string 
