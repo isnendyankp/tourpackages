@@ -9,9 +9,9 @@ const Tour = ({ id, image, info, name, price, removeTour }) => {
       <span className="tour-price">${price}</span>
       <div className="tour-info">
         <h5>{name}</h5>
-        <p>{info}</p>
+        <p>{readMore ? info :}</p>
         <button
-          type='button'
+          type="button"
           className="delete-btn btn-block btn"
           onClick={() => removeTour(id)}
         >
@@ -33,3 +33,4 @@ export default Tour
 // - Add parameter removeTour in Tour Component
 // - Add removeTour with Pass in at button Tour Component
 // - setup state variable with useState
+// - setup readmore display with ternary conditional
