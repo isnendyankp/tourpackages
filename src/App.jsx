@@ -34,6 +34,10 @@ const App = () => {
       <Loading />
     </main>
   }
+
+  if (tours.length === 0) {
+    
+  }
   
   return (
     <main>
@@ -62,3 +66,4 @@ export default App;
 // - cr8 const newTours with filter function. if the id not same with value id, the tour elements will be included in the newTours array 
 // - call function setTour() with argument newTours
 // - navigate removeTour at return
+// - cr8 base condition function if tour length array = 0
