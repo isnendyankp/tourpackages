@@ -4,35 +4,37 @@ import Tours from './Tours';
 
 const url = 'https://course-api.com/react-tours-project';
 
-const App = () => {
-  const [isLoading,setIsLoading] = useState(true)
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
-  const removeTour = (id) =>{
+  const removeTour = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
-     setTours(newTours);
-  }
+    setTours(newTours);
+  };
 
-  const fetchTours = async () =>{
-    setIsLoading(true)
+  const fetchTours = async () => {
+    setIsLoading(true);
     try {
       const response = await fetch(url);
       const tours = await response.json();
       setTours(tours);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-    setIsLoading(false)
+    setIsLoading(false);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchTours();
   }, []);
 
-  if(isLoading){
-    return <main>
-      <Loading />
-    </main>
+  if (isLoading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
   }
 
   if (tours.length === 0) {
@@ -40,15 +42,19 @@ const App = () => {
       <main>
         <div className="title">
           <h2>no tours left</h2>
-          <button type="button" style={{margin:'2rem'}} className="btn" onClick={() => fetchTours()}>
+          <button
+            type="button"
+            style={{ margin: '2rem' }}
+            className="btn"
+            onClick={() => fetchTours()}
+          >
             refresh
           </button>
         </div>
       </main>
     );
-    
   }
-  
+
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />
