@@ -36,6 +36,11 @@ const App = () => {
   }
 
   if (tours.length === 0) {
+    return (
+      <main>
+
+      </main>
+    );
     
   }
   
@@ -67,3 +72,4 @@ export default App;
 // - call function setTour() with argument newTours
 // - navigate removeTour at return
 // - cr8 base condition function if tour length array = 0
+// - Add return with main element
