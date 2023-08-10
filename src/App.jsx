@@ -38,7 +38,12 @@ const App = () => {
   if (tours.length === 0) {
     return (
       <main>
-
+        <div className="title">
+          <h2>no tours left</h2>
+          <button type="button" className="btn">
+            refresh
+          </button>
+        </div>
       </main>
     );
     
@@ -73,3 +78,4 @@ export default App;
 // - navigate removeTour at return
 // - cr8 base condition function if tour length array = 0
 // - Add return with main element
+// - Add div.title,h2,button refresh
