@@ -40,7 +40,7 @@ const App = () => {
       <main>
         <div className="title">
           <h2>no tours left</h2>
-          <button type="button" className="btn">
+          <button type="button" style={{margin:'2rem'}} className="btn" onClick={() => fetchTours()}>
             refresh
           </button>
         </div>
@@ -79,3 +79,4 @@ export default App;
 // - cr8 base condition function if tour length array = 0
 // - Add return with main element
 // - Add div.title,h2,button refresh
+// - Add style & onClick with fetchTours
